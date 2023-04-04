@@ -45,14 +45,20 @@ red: '#F06060', */
 }
 
 #main-layout{
-    height: 100vh;
     background-color: #e7dcb5;
-    padding: 20px;
     justify-content: center;
-    overflow: auto;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+}
+
+#container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100vh;
 }
 
 #main-layout::-webkit-scrollbar{
@@ -76,22 +82,32 @@ red: '#F06060', */
     filter: grayscale(0);
 }
 
-#toggle-sidebar-button{
-    width: fit-content;
-    background-color: #F06060;
+#navbar{
+    width: 100%;
+    display: flex;
+    background-color: #993838;
+}
+
+#sidebar-head{
+    width: 300px;
+    background-color: #ee6d6d;
+    color: white;
     padding: 10px;
-    border-radius: 0.2rem;
+    text-align: center;
+}
+
+#toggle-sidebar-button{
+    background-color: #af4343;
+    padding: 10px;
+    cursor: pointer;
     color: white;
 }
 
-@media (max-width: 600px) {
-    #sidebar{
-        width: 0px;
-    }
+#social-media{
+    display: flex;
+    justify-content: center;
 }
-
-@media(min-width: 600px){
-    #toggle-sidebar-button{
-        display: none;
-    }
+.media-icon{
+    margin-inline: 20px;
+    margin-top: 9px;
 }

@@ -4,7 +4,7 @@ const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holdi
 const IMG_ENDPOINT = 'https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/master/' 
 var lang = 'Javascript';
 
-const container = document.getElementById('main-layout');
+const container = document.getElementById('container');
 const sidebar = document.getElementById('sidebar');
 const sidebarList = document.getElementById('sidebar-list');
 const toggleSidebar = document.getElementById('toggle-sidebar-button');
