@@ -15,7 +15,7 @@ const getImgs = () =>{
             data.forEach(element => {
                 var eachImg =document.createElement('img');
                 eachImg.src= IMG_ENDPOINT+element.path;
-                eachImg.width = 300,
+                eachImg.width = 300;
                 container.appendChild(eachImg);
             });
         }
@@ -28,7 +28,8 @@ const getImgs = () =>{
 
 const selectLang = (l) =>{
     lang = l;
-    container.innerHTML = getImgs();
+    container.innerHTML = null;
+    getImgs();
 } 
 
 function getLang(){
@@ -52,5 +53,6 @@ function getLang(){
     req2.open('GET', WAIFUS_ENDPOINT);
     req2.send();
 }
+//calling initial functions
 getLang();
 getImgs();
