@@ -8,12 +8,9 @@ red: '#F06060', */
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    font-family: 'lucida console';
-    overflow: hidden;
-}
+    font-family: 'cascadia code';
+    overflow: hidden; 
+} 
 *::-webkit-scrollbar{
     display: none;
 }
@@ -36,12 +33,18 @@ red: '#F06060', */
 
 #sidebar{
     transition: 0.3s;
-    background-color: #F2EBBF;
-    overflow-y: auto;
-    padding: 10px;
-    float: left;
-    height: 100vh;
+    overflow: auto;
+    height: 92%;
     width: 300px;
+    padding: 10px;
+    background-color: #F2EBBF;
+}
+#sidebar-container{
+    float: left;
+}
+
+.container{
+    height: 100vh;
 }
 
 #main-layout{
@@ -50,15 +53,8 @@ red: '#F06060', */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-}
-
-#container{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     overflow: auto;
-    height: 100vh;
+    height: 95%;
 }
 
 #main-layout::-webkit-scrollbar{
@@ -101,13 +97,4 @@ red: '#F06060', */
     padding: 10px;
     cursor: pointer;
     color: white;
-}
-
-#social-media{
-    display: flex;
-    justify-content: center;
-}
-.media-icon{
-    margin-inline: 20px;
-    margin-top: 9px;
 }
