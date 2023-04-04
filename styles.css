@@ -1,0 +1,12 @@
+#sidebar{
+    display: inline;
+}
+#sidebar-list{
+    display: inline;
+}
+
+li{
+    display: inline;
+    margin-inline: 10px;
+    cursor: pointer;
+}
