@@ -4,7 +4,7 @@ const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holdi
 const IMG_ENDPOINT = 'https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/master/' 
 var lang = 'Javascript';
 
-const container = document.getElementById('container');
+const container = document.getElementById('main-layout');
 const sidebar = document.getElementById('sidebar');
 const sidebarList = document.getElementById('sidebar-list');
 
@@ -14,8 +14,8 @@ const getImgs = () =>{
             let data = JSON.parse(this.responseText); 
             data.forEach(element => {
                 var eachImg =document.createElement('img');
+                eachImg.className = 'waifu-pic';
                 eachImg.src= IMG_ENDPOINT+element.path;
-                eachImg.width = 300;
                 container.appendChild(eachImg);
             });
         }
@@ -32,15 +32,16 @@ const selectLang = (l) =>{
     getImgs();
 } 
 
-function getLang(){
+function getLangs(){
     req2.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let = data = JSON.parse(this.responseText);
             data.forEach(e => {
-                if(e.name === '.DS_Store' || e.name === 'README.md'){
+                if(e.name === '.DS_Store' || e.name === 'README.md' || e.name === 'CONTRIBUTING.md'){
                     return null;
                 }else{
-                    var li = document.createElement('li');
+                    var li = document.createElement('div');
+                    li.classList.add('lang')
                     li.innerText = e.name;
                     li.addEventListener('click', function(){
                         selectLang(e.name);
@@ -54,5 +55,5 @@ function getLang(){
     req2.send();
 }
 //calling initial functions
-getLang();
+getLangs();
 getImgs();
