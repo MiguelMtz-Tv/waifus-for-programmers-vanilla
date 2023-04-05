@@ -71,6 +71,9 @@ body{
     #main-layout {
         height: 88%;
     }
+    #toggle-sidebar-button{
+        flex-grow: 1;
+    }
 }
 
 #main-layout::-webkit-scrollbar{
@@ -111,6 +114,9 @@ body{
 #toggle-sidebar-button{
     background-color: #af4343;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     cursor: pointer;
     color: white;
+    text-align: center;
 }
