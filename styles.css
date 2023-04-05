@@ -65,6 +65,8 @@ body{
 @media (max-width: 600px){
     #sidebar{
         height: 88%;
+        width: 0px;
+        padding: 0px;
     }
     #main-layout {
         height: 88%;
