@@ -59,8 +59,8 @@ function getLangs(){
 
 toggleSidebar.addEventListener('click', function(){
     isOpen ? isOpen = false : isOpen = true; 
-    console.log(isOpen);
-    isOpen ? sidebar.style.width = '300px' : sidebar.style.width = '0px';
+    isOpen ? sidebar.style.width='300px' : sidebar.style.width ='0px';
+    isOpen ? sidebar.style.padding='10px' : sidebar.style.padding='0px';
 });
 
 //calling initial functions
