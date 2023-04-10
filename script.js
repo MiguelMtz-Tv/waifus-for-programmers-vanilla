@@ -15,15 +15,15 @@ const getImgs = () =>{
         if(this.readyState == 4 && this.status == 200){
             let data = JSON.parse(this.responseText); 
             data.forEach(element => {
-                var eachImg =document.createElement('img');
+                var eachImg = document.createElement('img');
                 eachImg.className = 'waifu-pic';
-                eachImg.src= IMG_ENDPOINT+element.path;
+                eachImg.src= element.download_url;
                 container.appendChild(eachImg);
             });
         }
     }
-    
-    req.open('GET', WAIFUS_ENDPOINT+lang);
+    let path = lang.replace('#', '%23');
+    req.open('GET', WAIFUS_ENDPOINT+path);
     req.send();
     
 }
