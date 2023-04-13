@@ -1,7 +1,6 @@
 const req = new XMLHttpRequest();
 const req2 = new XMLHttpRequest();
-const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/';
-const IMG_ENDPOINT = 'https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/master/' 
+const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/'; 
 var lang = 'Javascript';
 
 const container = document.getElementById('main-layout');
@@ -24,8 +23,7 @@ const getImgs = () =>{
     }
     let path = lang.replace('#', '%23');
     req.open('GET', WAIFUS_ENDPOINT+path);
-    req.send();
-    
+    req.send();  
 }
 
 const selectLang = (l) =>{
