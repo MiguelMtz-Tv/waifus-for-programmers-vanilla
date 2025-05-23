@@ -4,10 +4,9 @@ const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holdi
 var lang = 'Javascript';
 
 const container = document.getElementById('main-layout');
-const sidebar = document.getElementById('sidebar');
 const sidebarList = document.getElementById('sidebar-list');
 const toggleSidebar = document.getElementById('toggle-sidebar-button');
-var isOpen = false;
+let isOpen = true;
 
 const getImgs = () =>{
     req.onreadystatechange = function(){
@@ -56,9 +55,9 @@ function getLangs(){
 }
 
 toggleSidebar.addEventListener('click', function(){
-    isOpen ? isOpen = false : isOpen = true; 
-    isOpen ? sidebar.style.width='300px' : sidebar.style.width ='0px';
-    isOpen ? sidebar.style.padding='10px' : sidebar.style.padding='0px';
+    isOpen = !isOpen; 
+    isOpen ? sidebarList.style.width='300px' : sidebarList.style.width ='0px';
+    isOpen ? sidebarList.style.padding='10px' : sidebarList.style.padding='0px';
 });
 
 //calling initial functions
