@@ -7,10 +7,10 @@ red: '#F06060', */
 *{
 	margin: 0;
 	padding: 0;
-	border: 0;
-    font-family: 'cascadia code';
+    font-family: 'consolas';
     overflow: hidden; 
-} 
+}
+
 *::-webkit-scrollbar{
     display: none;
 }

@@ -1,21 +1,25 @@
-const req = new XMLHttpRequest();
-const req2 = new XMLHttpRequest();
 const WAIFUS_ENDPOINT = 'https://api.github.com/repos/cat-milk/Anime-Girls-Holding-Programming-Books/contents/'; 
-var lang = 'Javascript';
+let lang = 'Javascript';
 
 const container = document.getElementById('main-layout');
 const sidebarList = document.getElementById('sidebar-list');
 const toggleSidebar = document.getElementById('toggle-sidebar-button');
+
 let isOpen = true;
 
+
+
 const getImgs = () =>{
+    let req = new XMLHttpRequest();
     req.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let data = JSON.parse(this.responseText); 
-            data.forEach(element => {
-                var eachImg = document.createElement('img');
+            data.forEach((element, imageIndex) => {
+                let eachImg = document.createElement('img');
                 eachImg.className = 'waifu-pic';
                 eachImg.src= element.download_url;
+                eachImg.id = 'img-' + String(imageIndex);
+                eachImg.addEventListener('click', (img) => imageClickEvent(img))
                 container.appendChild(eachImg);
             });
         }
@@ -32,7 +36,8 @@ const selectLang = (l) =>{
 } 
 
 function getLangs(){
-    req2.onreadystatechange = function(){
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
             let = data = JSON.parse(this.responseText);
             data.forEach(e => {
@@ -50,8 +55,8 @@ function getLangs(){
             })
         }
     }
-    req2.open('GET', WAIFUS_ENDPOINT);
-    req2.send();
+    req.open('GET', WAIFUS_ENDPOINT);
+    req.send();
 }
 
 toggleSidebar.addEventListener('click', function(){

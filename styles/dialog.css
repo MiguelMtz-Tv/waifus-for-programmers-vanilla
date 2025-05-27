@@ -1,0 +1,36 @@
+#dialog {
+    position: relative;
+    margin: auto;
+    height: 90vh;
+    max-height: 800px;
+    border: solid 10px #993838;
+    background-color: #F2EBBF;
+}
+
+#image-dialog-container {
+    height: 92%;
+    margin: auto;
+}
+
+#image-dialog{
+    height: 100%;
+    width: 100%;
+}
+
+.dialog-actions{
+    margin-left: auto;
+    width: fit-content;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+button{
+    padding: 10px;
+    background-color: #993838;
+    color: white;
+    cursor: pointer;
+    margin-inline: 2px;
+}

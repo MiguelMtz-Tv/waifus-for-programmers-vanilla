@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waifus for Programers!</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
     <script src="https://kit.fontawesome.com/ed9247f5a5.js" crossorigin="anonymous"></script>
 </head> 
 <body>
@@ -30,7 +31,18 @@
             <div id="main-layout"></div>
         </div> 
     </div>
-   
-    <script src="script.js"></script>
+
+    <dialog id="dialog">
+        <div id="image-dialog-container">
+            <img id="image-dialog">
+        </div>
+        <div class="dialog-actions">
+            <button onclick="btnDownload()" id="download-button">Download</button>
+            <button onclick="btnCloseDialog()">Close</button>
+        </div>
+    </dialog>
+
+    <script src="./scripts/dialog.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
